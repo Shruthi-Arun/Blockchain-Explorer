@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Explorer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #8A2BE2; /* Purple background color */
+            color: #FFFFFF; /* White text color */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4B0082; /* Dark purple header background color */
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header a {
+            color: #FFFFFF; /* White color for links */
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        @keyframes twinkling {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Set a higher z-index to move it behind other elements */
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #F8F8FF; /* White color for stars */
+            border-radius: 50%;
+            animation: twinkling 3s ease-in-out infinite;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #4B0082; /* Dark purple footer background color */
+            color: #FFFFFF; /* White text color */
+        }
+
+        marquee {
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 Blockchain Explorer 🚀</h1>
+        <br>
+        <nav>
+            <a href="https://en.wikipedia.org/wiki/Blockchain" target="_blank">Learn about Blockchain</a>
+            <a href="https://coinmarketcap.com/" target="_blank">CoinMarketCap</a>
+        </nav>
+    </header>
+    <br><br>
+    <div class="container">
+         
+    
+        <h2>Metamask Wallet:</h2>
+        <a href="https://metamask.io/download" class="metamask-button" target="_blank"><button>Download MetaMask</button></a>
+        
+        <h2>Sepolia Faucet using Alchemy:</h2>
+        <a href="https://sepoliafaucet.com/" class="metamask-button" target="_blank"><button>Alchemy</button></a>
+        
+        <h2>Sepolia Faucet POW:</h2>
+        <a href="https://sepolia-faucet.pk910.de/" class="metamask-button" target="_blank"><button>POW</button></a>
+        
+        
+    </div>
+
+    <div class="stars"></div>
+    <br><br> <br><br> <br><br> <br> 
+    <br><br> <br><br> <br><br> 
+    <footer>
+        <marquee>Thank you for exploring the Blockchain!</marquee>
+    </footer>
+
+    <script>
+        // Create stars
+        const stars = document.querySelector('.stars');
+
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.left = Math.random() * 100 + 'vw';
+            stars.appendChild(star);
+        }
+    </script>
+</body>
+</html>
